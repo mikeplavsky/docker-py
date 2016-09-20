@@ -80,8 +80,8 @@ Create a service.
   Defaults to `replicated`.
 * update_config (dict): Specification for the update strategy of the service.
   See the [UpdateConfig class](#UpdateConfig) for details. Default: `None`.
-* networks (list): List of network names or IDs to attach the service to.
-  Default: `None`.
+* networks (list): List of dictionaries with the key Target pointing to network name or ID to attach the service to.
+  Default: `None`. Example: `[dict(Target="net1"), dict(Target="net2")]`
 * endpoint_config (dict): Properties that can be configured to access and load
   balance a service. Default: `None`.
 
